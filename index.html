@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lbs to Kg Converter</title>
+  <meta charset="UTF-8">
+  <title>lbs to kg Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
-  <h2>Convert Pounds (lbs) to Kilograms (kg)</h2>
-  <input type="number" id="lbsInput" placeholder="Enter lbs" />
+  <h1>lbs to kg Converter</h1>
+  <input type="number" id="lbs" placeholder="Enter weight in lbs" />
   <button onclick="convert()">Convert</button>
   <p id="result"></p>
 
   <script>
     function convert() {
-      const lbs = document.getElementById('lbsInput').value;
-      const kg = (lbs * 0.453592).toFixed(2);
-      document.getElementById('result').innerText = `${lbs} lbs = ${kg} kg`;
+      let lbs = document.getElementById("lbs").value;
+      let kg = (lbs * 0.45359237).toFixed(2);
+      document.getElementById("result").innerText = `${lbs} lbs = ${kg} kg`;
     }
   </script>
 </body>
